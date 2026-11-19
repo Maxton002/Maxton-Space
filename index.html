@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxton's Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+  <div class="top-bar">
+    <button id="theme-toggle" onclick="toggleDarkMode()">☀️ Light</button>
+  </div>
+
+  <header class="center">
+    <h1>Maxton's Space</h1>
+  </header>
+
+  <nav class="apps">
+    <button class="app-btn active" onclick="openApp('profile', this)">Profile</button>
+    <button class="app-btn" onclick="openApp('socials', this)">Socials</button>
+    <button class="app-btn" onclick="openApp('projects', this)">Projects</button>
+    <button class="app-btn" onclick="openApp('contact', this)">Contact</button>
+    <button class="app-btn mystery" onclick="openApp('secret', this)">???</button>
+  </nav>
+
+  <main class="window-container">
+
+    <section id="profile" class="app-window active">
+      <h2>// Profile</h2>
+      <p>Hey, I'm <strong>Maxton</strong>, or known as Nathan Kyle Bruno. CS student, web builder, and 2D indie game dev.</p>
+      <div class="tags">
+        <span>HTML/CSS/JS</span>
+        <span>C / C++</span>
+        <span>Godot 4</span>
+      </div>
+    </section>
+
+    <section id="socials" class="app-window">
+      <h2>// Socials</h2>
+      <div class="link-list">
+        <a href="#" target="_blank">GitHub →</a>
+        <a href="#" target="_blank">itch.io →</a>
+        <a href="#" target="_blank">Discord / Gaming →</a>
+      </div>
+    </section>
+
+    <section id="projects" class="app-window">
+      <h2>// Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <h3>Hari-Mon</h3>
+          <p>Arcade card-battler built in Godot 4.</p>
+        </div>
+        <div class="card">
+          <h3>Print & Photo Web App</h3>
+          <p>Single-page ordering system with live pricing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="app-window">
+      <h2>// Contact</h2>
+      <p>Want to collaborate on a game or web project? Drop a message.</p>
+      <a class="cta-btn" href="mailto:youremail@example.com">Send an Email →</a>
+    </section>
+
+    <section id="secret" class="app-window">
+      <h2>// ???</h2>
+      <p id="secret-text">You found the hidden tab. Click below for a random quote or easter egg.</p>
+      <button class="cta-btn" onclick="triggerEasterEgg()">Interact</button>
+    </section>
+  
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
