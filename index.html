@@ -19,8 +19,8 @@
   <nav class="apps">
     <button class="app-btn active" onclick="openApp('profile', this)">Profile</button>
     <button class="app-btn" onclick="openApp('socials', this)">Socials</button>
+    <button class="app-btn" onclick="openApp('journey', this)">Journey</button>
     <button class="app-btn" onclick="openApp('projects', this)">Projects</button>
-    <button class="app-btn" onclick="openApp('contact', this)">Contact</button>
     <button class="app-btn mystery" onclick="openApp('secret', this)">???</button>
   </nav>
 
@@ -28,20 +28,25 @@
 
     <section id="profile" class="app-window active">
       <h2>// Profile</h2>
-      <p>Hey, I'm <strong>Maxton</strong>, or known as Nathan Kyle Bruno. CS student, web builder, and 2D indie game dev.</p>
+      <p>Hey, I'm <strong>Maxton</strong>, 
+        or known as Nathan Kyle Bruno. 
+        A CS student, aspiring web developer, and game developer.</p>
       <div class="tags">
         <span>HTML/CSS/JS</span>
         <span>C / C++</span>
         <span>Godot 4</span>
       </div>
+      <a class="jrn-btn" href="resume.pdf" download="NathanKyleBruno_Resume.pdf">Resume →</a>
     </section>
 
     <section id="socials" class="app-window">
       <h2>// Socials</h2>
       <div class="link-list">
-        <a href="#" target="_blank">GitHub →</a>
-        <a href="#" target="_blank">itch.io →</a>
-        <a href="#" target="_blank">Discord / Gaming →</a>
+        <a href="https://github.com/Maxton002" target="_blank">GitHub →</a>
+        <a href="https://maxton002.itch.io/" target="_blank">itch.io →</a>
+        <a href="https://discord.com/users/maxton237" target="_blank">Discord →</a>
+        <a href="https://www.facebook.com/NathanKyleBruno" target="_blank">Facebook →</a>
+        <a href="mailto:brunonathankyle@gmail.com" target="_blank">Email →</a>
       </div>
     </section>
 
@@ -49,20 +54,44 @@
       <h2>// Projects</h2>
       <div class="project-grid">
         <div class="card">
-          <h3>Hari-Mon</h3>
-          <p>Arcade card-battler built in Godot 4.</p>
+          <a href="https://github.com/Maxton002/Pocket-Haribots" target="_blank">
+            <h3>Pocket Haribots</h3>
+          </a>
+            <p>Arcade card-battler built in Godot 4.</p>
         </div>
         <div class="card">
-          <h3>Print & Photo Web App</h3>
-          <p>Single-page ordering system with live pricing.</p>
+            <h3>Print Web App</h3>
+            <p>Print order website with live pricing.</p>
         </div>
+        <div class="card">
+          <a href="https://github.com/Maxton002/Maxton-Space" target="_blank">
+            <h3>Portfolio Website</h3>
+          </a>
+            <p>My personal portfolio website.</p>
       </div>
     </section>
 
-    <section id="contact" class="app-window">
-      <h2>// Contact</h2>
-      <p>Want to collaborate on a game or web project? Drop a message.</p>
-      <a class="cta-btn" href="mailto:youremail@example.com">Send an Email →</a>
+    <section id="journey" class="app-window">
+      <h2>// Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">Late 2026 — Present</span>
+          <h3>Game Dev & Community</h3>
+          <p>Building <em>Pocket Haribots</em> in Godot 4 and volunteering with Google Developer Groups on Campus.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Mid 2026</span>
+          <h3>Shifted to Computer Science</h3>
+          <p>Transitioned into BSCS to focus full-time on software, web, and game development.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Early 2026</span>
+          <h3>Web & Programming Foundations</h3>
+          <p>Started building interactive single-page web apps and writing foundational code in C and C++.</p>
+        </div>
+      </div>
     </section>
 
     <section id="secret" class="app-window">
