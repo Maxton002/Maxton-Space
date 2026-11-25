@@ -24,9 +24,14 @@ function toggleDarkMode() {
 }
 
 const secrets = [
-  "Achievement Unlocked: Curious Visitor.",
-  "Currently building games in Godot 4 & breaking CSS layouts.",
-  "Tip: Try toggling light/dark mode in the top right!"
+  "Achievement Unlocked: How did I get here?",
+  "Obsessed with Pokemon and Monster Hunter!",
+  "JRPGs enthusiast",
+  "Glazing Charge Blade is the reason this heart still beats",
+  "Bugs? Make it a feature!",
+  "Idk what I'm doing, but it works",
+  "Idk what else to put here, so here's a secret: I'm taken",
+  "International relationship: 1,616 km away, one chat away.",
 ];
 
 function triggerEasterEgg() {
@@ -34,6 +39,57 @@ function triggerEasterEgg() {
   const randomMsg = secrets[Math.floor(Math.random() * secrets.length)];
   textEl.textContent = randomMsg;
 }
+
+const music = document.getElementById("background-music");
+const musicToggle = document.getElementById("music-toggle");
+const musicStatus = document.getElementById("music-status");
+const hoverSound = document.getElementById("hover-sound");
+const hoverStatus = document.getElementById("hover-status");
+hoverSound.volume = 0.3;
+
+function playHoverSound() {
+  if (!hoverSound.paused) {
+    return;
+  }
+
+  hoverSound.currentTime = 0;
+  hoverSound.play()
+    .then(() => {
+      hoverStatus.textContent = "";
+      hoverStatus.hidden = true;
+    })
+    .catch(() => {
+      hoverStatus.textContent = "Couldn't play hover sound. Check browser audio settings and that ButtonClick.mp3 is available.";
+      hoverStatus.hidden = false;
+    });
+}
+
+musicToggle.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicToggle.textContent = "♫ Pause music";
+      musicToggle.setAttribute("aria-pressed", "true");
+      musicStatus.textContent = "";
+      musicStatus.hidden = true;
+    } catch {
+      musicToggle.textContent = "♫ Play music";
+      musicToggle.setAttribute("aria-pressed", "false");
+      musicStatus.textContent = "Couldn't play music.";
+      musicStatus.hidden = false;
+    }
+  } else {
+    music.pause();
+    musicToggle.textContent = "♫ Play music";
+    musicToggle.setAttribute("aria-pressed", "false");
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target instanceof Element && event.target.closest("button, a")) {
+    playHoverSound();
+  }
+});
 
 if (localStorage.getItem("maxton-theme") === "light") {
   document.body.classList.remove("dark-mode");

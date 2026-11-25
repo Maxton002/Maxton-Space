@@ -40,9 +40,11 @@ body {
   max-width: 720px;
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
 }
 
-#theme-toggle {
+#theme-toggle,
+#music-toggle {
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
@@ -51,6 +53,14 @@ body {
   font-family: inherit;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.music-status {
+  width: 100%;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 /* Maxton's Space Title */
@@ -163,7 +173,7 @@ body {
   border-color: var(--accent);
 }
 
-.jrn-btn {
+.cta-btn, .jrn-btn {
   display: inline-block;
   margin-top: 16px;
   background: var(--accent);
