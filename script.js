@@ -17,7 +17,7 @@ function openApp(appId, clickedBtn) {
 }
 
 function toggleDarkMode() {
-  const isDark = document.body.classList.toggle("dark-mode");
+  const isDark = document.documentElement.classList.toggle("dark-mode");
   const toggleBtn = document.getElementById("theme-toggle");
   toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
   localStorage.setItem("maxton-theme", isDark ? "dark" : "light");
@@ -93,6 +93,6 @@ document.addEventListener("click", (event) => {
 });
 
 if (localStorage.getItem("maxton-theme") === "light") {
-  document.body.classList.remove("dark-mode");
+  document.documentElement.classList.remove("dark-mode");
   document.getElementById("theme-toggle").textContent = "🌙 Dark";
 }
