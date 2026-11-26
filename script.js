@@ -32,6 +32,7 @@ const secrets = [
   "Idk what I'm doing, but it works",
   "Idk what else to put here, so here's a secret: I'm taken",
   "International relationship: 1,616 km away, one chat away.",
+  "I made this bg music myself.",
 ];
 
 function triggerEasterEgg() {
