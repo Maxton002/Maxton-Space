@@ -27,7 +27,7 @@ const secrets = [
   "Achievement Unlocked: How did I get here?",
   "Obsessed with Pokemon and Monster Hunter!",
   "JRPGs enthusiast",
-  "Glazing Charge Blade is the reason this heart still beats",
+  "Glazing Charge Blade is the reason this heart still beats!!",
   "Bugs? Make it a feature!",
   "Idk what I'm doing, but it works",
   "Idk what else to put here, so here's a secret: I'm taken",
